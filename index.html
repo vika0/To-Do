@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>To-do</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <h1>To-do</h1>
+
+                <form name="taskForm" onsubmit="taskList();" action="#">
+                    <input type="text" name="new-task" id="new-task" maxlength="40" placeholder="Ką reikia atlikti?"/>
+                    <input type="submit" style="visibility: hidden;" />
+                </form>                
+
+                <div class="undone-task">
+                    <h3>Užduotys</h3><div class="undone-span">
+                        <span id="task-count"></span>
+                    </div>
+                    <div id="task-list"></div>
+                </div>
+                <div class="done-task">
+                    <h3>Atliktos</h3>
+                    <div class="done-span">
+                        <span id="done-task-count"></span>
+                    </div>
+                    <div id="done-task-list"></div>
+                </div>
+
+
+            </div>
+        </div>
+        <script type="text/javascript" src="script/script.js"></script> 
+    </body>    
+</html>

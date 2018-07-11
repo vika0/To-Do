@@ -1,0 +1,157 @@
+@font-face{
+    font-family: font-Heavy;
+    src: url(fonts/Aileron-Heavy.otf);
+}
+@font-face{
+    font-family: font-Bold;
+    src: url(fonts/Aileron-Bold.otf);
+}
+@font-face{
+    font-family: font-Light;
+    src: url(fonts/Aileron-Light.otf);
+}
+@font-face{
+    font-family: font-Regular;
+    src: url(fonts/Aileron-Regular.otf);
+}
+body{
+    background-color: #e5e5e5;
+}
+
+.container{
+    position: absolute;
+    right: 10%;
+    overflow-y: auto;
+    top: 10%;
+    width: 80%;
+    margin: auto;
+    background-color: #f7f9fa;
+}
+.container .content{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.container .content h1{    
+    font-family: font-Heavy;
+    color: #2f80ed;   
+}
+
+.content form{
+    margin-bottom: 0;
+}
+.content form input[type=text]{
+    font-family: font-Light;
+    padding-left: 15px;
+    min-height: 60px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 10px #e0e0e0;
+}
+
+::placeholder{
+    color: #929292;
+}
+
+.content .undone-task h3, .content .done-task h3{
+    font-family: font-Bold;
+    color: #828282;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.content .undone-task span, .content .done-task span,
+#task-list p, #done-task-list p{
+    font-family: font-Bold;
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.content .task-element{
+    border: 1px solid #e5e6e7;
+    border-radius: 3px;
+    box-shadow: 0px 10px 18px #e5e6e7;
+    margin-bottom: 20px;
+    min-height: 60px;
+    overflow: auto;
+    display: inline-flex;
+    width: 100%;
+}
+.task-element p{
+    font-family: font-Light; 
+    color: #c5c5c5;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.task-element h4, .done-task h4{
+    font-family: font-Light;    
+    color: #828282;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.done-task h4{
+    text-decoration: line-through;
+}
+
+.task-element .task-left-element{
+    width: 90%;
+    float: left;
+}
+.task-element .task-right-element{
+    margin: auto 5px;
+    float: right;
+    width: 10%;  
+}
+
+.content .undone-task span.check-mark{
+    color: #ccc;
+    font-weight: 900;
+    font-size: 20px;
+    float: right;
+    margin-right: 15px;
+}
+
+.task-element a{
+    text-decoration: none;
+}
+
+.task-element h4, .task-element p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.done-span, .undone-span{
+    display: inline-block;
+}
+.content .undone-task span.check-mark:hover{
+    color: #6fcf97;
+}
+
+#done-task-list h4{
+    color: #bdbdbd;
+}
+@media only screen and (max-width: 1200px) {
+    .container .content {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    body{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .content .undone-task h3, .content .done-task h3{
+        display: block;
+    }
+    .task-element:first-child, .done-task h4:first-child{
+        margin-top: 20px;
+    }
+    .undone-task h3, .done-task h3, .container .content h1{
+        text-align: center;
+    }
+    .done-span, .undone-span{
+        display: block;
+        text-align: center;
+    }
+}
